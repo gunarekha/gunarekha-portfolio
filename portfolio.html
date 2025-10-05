@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Gunarekha S</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-page="portfolio">
+  <header class="topbar">
+    <div class="row container">
+      <a class="brand" href="index.html">
+        <span class="logo">GS</span>
+        <span class="who"><small>Java Full Stack Developer</small><b>Gunarekha S</b></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" data-page="home"><span>Home</span></a>
+        <a href="about.html" data-page="about"><span>About</span></a>
+        <a href="resume.html" data-page="resume"><span>Resume</span></a>
+        <a href="portfolio.html" data-page="portfolio"><span>Portfolio</span></a>
+        <a href="services.html" data-page="services"><span>Services</span></a>
+        <a href="contact.html" data-page="contact"><span>Contact</span></a>
+      </nav>
+      <div class="theme-toggle">
+        <small>Theme</small>
+        <button title="Toggle theme" onclick="__toggleTheme()">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Section Heading -->
+    <section class="sec-head"><h2>My Projects</h2></section>
+
+    <!-- Projects Grid -->
+    <section>
+      <div class="grid">
+
+        <!-- Foodie Express -->
+        <article class="card hover">
+          <div class="ph-img" style="background:linear-gradient(135deg, #f97316, #ef4444)"></div>
+          <div class="overlay">
+            <b>Foodie Express — Online Food Delivery App</b>
+            <p>Built a responsive full-stack food delivery platform with restaurant listings, cart, order history, and payment integration.</p>
+            <p><b>Tech Stack:</b> React.js, Node.js, Express.js, MySQL, MongoDB, Stripe API</p>
+            <a href="https://github.com/gunarekha/Foodie-Express" target="_blank" class="btn small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Frontend Mini Projects -->
+        <article class="card hover">
+          <div class="ph-img" style="background:linear-gradient(135deg, #8b5cf6, #06b6d4)"></div>
+          <div class="overlay">
+            <b>Frontend Mini Projects</b>
+            <p>A collection of interactive UI applications like To-Do App, BMI Calculator, and Weather App demonstrating clean UI and localStorage integration.</p>
+            <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
+            <a href="https://github.com/gunarekha/frontend-projects" target="_blank" class="btn small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Case Study Project -->
+        <article class="card hover">
+          <div class="ph-img" style="background:linear-gradient(135deg, #22c55e, #0ea5e9)"></div>
+          <div class="overlay">
+            <b>Case Study — Anisometropia & Amblyopia</b>
+            <p>Analyzed the relationship between anisometropia and amblyopia through data collection and clinical observation, focusing on early diagnosis and management.</p>
+            <p><b>Field:</b> Healthcare Research</p>
+            <a href="https://drive.google.com/drive/folders/19twrSYyiRWTnQ4MipGM32T0_uL5sjKb7" target="_blank" class="btn small">View Case Study</a>
+          </div>
+        </article>
+
+        <!-- UI Concept Work -->
+        <article class="card hover">
+          <div class="ph-img" style="background:linear-gradient(135deg, #f59e0b, #fb7185)"></div>
+          <div class="overlay">
+            <b>UI/UX Concept Designs</b>
+            <p>Designed modern web UI layouts and landing pages inspired by Swiggy, Zomato, and healthcare dashboards using Figma and Tailwind CSS.</p>
+            <p><b>Tools:</b> Figma, Tailwind CSS</p>
+            <a href="https://drive.google.com/drive/folders/1ngRzc7PluDky1qbPQMK5H3HMa-UO7ULI" target="_blank" class="btn small">View Designs</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="sec-head"><h2>Want to Collaborate?</h2></div>
+      <p>I’m open to freelance and full-time opportunities in full-stack web development. Let’s work together to bring your ideas to life!</p>
+      <a class="btn primary" href="contact.html">Get in Touch</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Gunarekha S — Crafted with gradients & care.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

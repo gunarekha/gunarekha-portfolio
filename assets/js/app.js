@@ -1,35 +1,47 @@
-// Animate skill bars + active nav highlight
+// app.js
+import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+emailjs.init("4eW0P2m6SOZnjVeq_"); // Replace with your EmailJS User ID
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Animate skill bars
   document.querySelectorAll('.bar > i[data-width]').forEach(el => {
     const w = el.getAttribute('data-width');
     requestAnimationFrame(() => el.style.width = w);
   });
 
+  // Active nav highlight
   const page = document.body.getAttribute('data-page');
   if(page){
     document.querySelectorAll('.nav a[data-page]').forEach(a => {
-      if(a.getAttribute('data-page') === page){ a.classList.add('active'); }
+      if(a.getAttribute('data-page') === page){ 
+        a.classList.add('active'); 
+      }
     });
   }
 
-  // ===== EmailJS Contact Form Integration =====
-  const contactForm = document.getElementById("contact-form");
-  const formStatus = document.getElementById("form-status");
+  // Contact form
+  const form = document.getElementById('contact-form');
+  const toast = document.getElementById('form-toast');
 
-  if(contactForm){
-    contactForm.addEventListener("submit", function(e){
+  function showToast(message, isError=false){
+    toast.textContent = message;
+    toast.className = 'toast show' + (isError ? ' error' : '');
+    setTimeout(() => {
+      toast.className = 'toast';
+    }, 3000);
+  }
+
+  if (form) {
+    form.addEventListener('submit', function(e){
       e.preventDefault();
-
-      emailjs.sendForm("service_i56laug", "template_ffq4z1c", this)
+      emailjs.sendForm('service_i56laug', 'template_1okn5zl', form)
         .then(() => {
-          formStatus.textContent = "Message sent successfully!";
-          formStatus.style.color = "green";
-          contactForm.reset();
+          showToast("Message sent successfully!");
+          form.reset();
         })
         .catch((error) => {
-          formStatus.textContent = "Oops! Something went wrong.";
-          formStatus.style.color = "red";
           console.error("EmailJS error:", error);
+          showToast("Oops! Something went wrong.", true);
         });
     });
   }

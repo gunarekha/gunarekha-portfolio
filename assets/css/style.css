@@ -545,3 +545,26 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 15px 20px;
+  background-color: #2ecc71; /* green for success */
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-10px);
+}
+.toast.error {
+  background-color: #e74c3c; /* red for error */
+}

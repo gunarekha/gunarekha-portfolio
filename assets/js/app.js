@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
 
-  if(contactForm){ // make sure form exists on this page
+  if(contactForm){
     contactForm.addEventListener("submit", function(e){
-      e.preventDefault(); // prevent page reload
+      e.preventDefault();
 
       emailjs.sendForm("service_i56laug", "template_ffq4z1c", this)
         .then(() => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => {
           formStatus.textContent = "Oops! Something went wrong.";
           formStatus.style.color = "red";
-          console.error("EmailJS error:", error); // <-- shows real error
+          console.error("EmailJS error:", error);
         });
     });
   }
